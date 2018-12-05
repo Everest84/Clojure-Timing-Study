@@ -6,9 +6,13 @@
 
 ## Getting Started
 
-**Visit [https://clojure.org/guides/getting_started](https://clojure.org/guides/getting_started) and install all of the requirements to run Clojure projects.**
+### Installation
 
-## Accepted file text formatting
+Visit [https://clojure.org/guides/getting_started](https://clojure.org/guides/getting_started) and install all of the requirements to run Clojure projects.
+
+## Text file formatting
+
+### Valid
 
 The accepted formatting in the numbers file is only as follows:
 ```
@@ -20,6 +24,8 @@ The accepted formatting in the numbers file is only as follows:
 76819
 442215623
 ```
+
+### Invalid
 
 If a file is provided that doesn't match the required formatting, the program will fail.
 

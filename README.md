@@ -20,13 +20,20 @@ The accepted formatting in the numbers file is only as follows:
 76819
 442215623
 ```
+
 If a file is provided that doesn't match the required formatting, the program will fail.
+
+For example:
+```
+52329 67271983 959562 9113341232 112 76819 442215623
+```
 
 ## Running the project
 
 ### Expected results
 
 The program is designed to accept a text file containing rows of numbers, which are converted to a list of long's (64bit integers). 
+
 *Note: The supplied file in this repository contains a list of numbers that are longer than the standard 32bit integer, so the project code is catered to that. If you know your numbers will always be less than the maximum value for a 32bit integer, you can modify the code to improve performance.*
 
 ### Mutli-threading

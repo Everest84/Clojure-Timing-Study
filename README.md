@@ -40,7 +40,7 @@ For example:
 
 The program is designed to accept a text file containing rows of numbers, which are converted to a list of long's (64bit integers). 
 
-*Note: The supplied file in this repository contains a list of numbers that are longer than the standard 32bit integer, so the project code is catered to that. If you know your numbers will always be less than the maximum value for a 32bit integer, you can modify the code to improve performance.*
+*Note: The supplied file in this repository contains a list of numbers that are longer than the maximum value for a 32bit integer, so the project code is catered to use the `Long` data type instead of `Integer`. If you know your numbers will always be less than the maximum value for a 32bit integer, you can modify the code to improve performance.*
 
 ### Mutli-threading
 

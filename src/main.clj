@@ -31,7 +31,7 @@
                 (quickSort greater)))))
 
 (do
-  (def numbersStringList (readFile "numbers-50.txt"))
+  (def numbersStringList (readFile (first *command-line-args*))
 	(def numbers (convertToList numbersStringList))
 	(println "List of numbers:" numbers)
   (def sortedNumbers (quickSort numbers))

@@ -36,6 +36,10 @@ For example:
 
 ## Running the project
 
+### Linux
+
+Run `clj -m cts resources/numbers.txt`
+
 ### Expected results
 
 The program is designed to accept a text file containing rows of numbers, which are converted to a list of long's (64bit integers). 

@@ -36,12 +36,28 @@ For example:
 
 ## Running the project
 
+### Linux
+
+Run `clj -m cs441 res/numbers.txt` or provide your own numbers resource.
+
 ### Expected results
 
 The program is designed to accept a text file containing rows of numbers, which are converted to a list of long's (64bit integers). 
 
 *Note: The supplied file in this repository contains a list of numbers that are longer than the maximum value for a 32bit integer, so the project code is catered to use the `Long` data type instead of `Integer`. If you know your numbers will always be less than the maximum value for a 32bit integer, you can modify the code to improve performance.*
 
-### Mutli-threading
+### Mutli-threading results
 
-...
+The mergesort algorithm was ran in using 1, 2, 4, 8, 16, and 32 threads on a dataset of 100,000 64 bit integers.
+
+The results were as follows:
+* 1-thread: 39876.388523ms
+* 2-thread: 24293.904029ms
+* 4-thread: 21569.59776ms
+* 8-thread: 13754.661419ms
+* 16-thread: 8121.272467ms
+* 32-thread: 4108.22421ms
+
+### Conclusion
+
+After studying the results, it is safe to say that there seems to be a significant advantage to using more threads to complete a mergesort algorithm. 

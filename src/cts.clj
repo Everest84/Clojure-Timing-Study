@@ -1,10 +1,8 @@
 ;; Matthew Downs
 ;; CS 441
 
-;; "Write a program in Clojure that will read a text file containing unsigned integers.""
-
 ;; Namespace `clojure-timing-study`
-(ns clojure-timing-study.core)
+(ns cts)
 ;; Require the string library
 (require '[clojure.string :as cstr])
 
@@ -30,10 +28,9 @@
                 [pivot]
                 (quickSort greater)))))
 
-(do
-  (def numbersStringList (readFile (first *command-line-args*))
-	(def numbers (convertToList numbersStringList))
-	(println "List of numbers:" numbers)
+(defn -main [& args]
+  (def numbersStringList (readFile (first *command-line-args*)))
+  (def numbers (convertToList numbersStringList))
   (def sortedNumbers (quickSort numbers))
   (println "List of sorted numbers:" sortedNumbers)
 )

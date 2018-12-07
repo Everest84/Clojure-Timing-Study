@@ -2,7 +2,7 @@
 
 CS 441 Final Project
 
-*Write a program in Clojure that will read a text file containing unsigned integers (which will be provided later). Your program will read in a large collection of integers and put them into a list. Using code in your program (i.e. NOT calling a library routine), sort the integers into order, using either the quicksort or mergesort algorithm. For the first pass, carry this out in a single-threaded program. Then, using Clojure's parallelism options, repeat the sort of the original list, using 2, 4, 8, 16, and 32 threads. Repeat all sorts 5 times on the same hardware and report the average times. Do not count file access time as part of the sorting time. Plot the completion time as a function of the number of threads, and produce a short (1-2 page) document summarizing and explaining your results. The summary document should include charts or graphs as appropriate to summarize your data and support your findings.*
+*Write a program in Clojure that will read a text file containing unsigned integers (which will be provided later). Your program will read in a large collection of integers and put them into a list. Using code in your program (i.e. NOT calling a library routine), sort the integers into order, using either the sort or mergesort algorithm. For the first pass, carry this out in a single-threaded program. Then, using Clojure's parallelism options, repeat the sort of the original list, using 2, 4, 8, 16, and 32 threads. Repeat all sorts 5 times on the same hardware and report the average times. Do not count file access time as part of the sorting time. Plot the completion time as a function of the number of threads, and produce a short (1-2 page) document summarizing and explaining your results. The summary document should include charts or graphs as appropriate to summarize your data and support your findings.*
 
 ## Getting Started
 
@@ -45,6 +45,8 @@ Run `clj -m cs441 res/numbers.txt` or provide your own numbers resource.
 The program is designed to accept a text file containing rows of numbers, which are converted to a list of long's (64bit integers). 
 
 *Note: The supplied file in this repository contains a list of numbers that are longer than the maximum value for a 32bit integer, so the project code is catered to use the `Long` data type instead of `Integer`. If you know your numbers will always be less than the maximum value for a 32bit integer, you can modify the code to improve performance.*
+
+The numbers are then recorded for performance as they run through a mergesort algorithm given a number of threads to use. After the sorting is complete, the program will display the time taken to perform the mergesort.
 
 ### Mutli-threading results
 
